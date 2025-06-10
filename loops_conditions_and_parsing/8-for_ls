@@ -7,7 +7,7 @@ if [ -f $file ]
 then
 	if [[ $file == *-* ]]
 	then
-		echo ${file#*-}
+		echo "${file#*-}"
 	else
 		echo $file
 	fi
