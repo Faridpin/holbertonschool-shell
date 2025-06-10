@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #This script current file directory in list format
 
-for i in *
+for file in *
 do
 if [ -f $file ]
 then
