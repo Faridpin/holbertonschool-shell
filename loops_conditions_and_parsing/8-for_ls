@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#This script current file directory in list format
+
+for i in *
+do
+if [ -f $file ]
+then
+	if [[ $file == *-* ]]
+	then
+		echo ${file#*-}
+	else
+		echo $file
+	fi
+fi
+done
