@@ -1,14 +1,4 @@
 #!/usr/bin/env bash
 #Parsing Apache file better
 
-awk '
-    {
-        ip_status = $1 " " $9  # Combine IP and HTTP status
-        count[ip_status]++     # Count occurrences
-    }
-    END {
-        for (entry in count) {
-            print count[entry], entry  # Print: COUNT IP STATUS
-        }
-    }
-' apache-access.log | sort -nr
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -nr | awk '{print $1, $2, $3}'
