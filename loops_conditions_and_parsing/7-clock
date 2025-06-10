@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#This script prints minutes and hours
+
+i=0
+while ((i<780))
+do
+	if ((i%60==0))
+	then
+		echo "Hour: $((i/60))"
+	else
+		echo $((i%60))
+	fi
+	((i++))
+done
