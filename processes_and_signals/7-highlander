@@ -3,5 +3,4 @@
 while true
 do
         echo "I am invincible!!!"
-        sleep 2
 done
