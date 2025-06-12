@@ -1,1 +1,7 @@
-
+#!/usr/bin/env bash
+#This script prints "To infinity and beyond" until manual break with 2 seconds sleep
+while true
+do
+        echo "I am invincible!!!"
+        sleep 2
+done
