@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 #it combines previous ones
 
-trap 'echo "I hate the kill command"' SIGTERM
 trap 'echo "Y U no love me?!"' SIGINT
-trap 'rm /var/run/myscript.pid; kill $$' SIGTERM
+trap 'echo "I hate the kill command"; rm /var/run/myscript.pid; kill $$' SIGTERM
 trap 'rm /var/run/myscript.pid; kill $$)' SIGQUIT
 pgrep $$ > "/var/run/myscript.pid"
 
